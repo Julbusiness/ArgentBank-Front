@@ -10,11 +10,10 @@ import "./App.css";
 function App() {
 	return (
 		<div className="App">
-			<Navbar isLoggedIn={false} />
 			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/signin" element={<Signin />} />
-				<Route path="/user" element={<User />} />
+				<Route path="/" element={<><Navbar isLoggedIn={false} /><Home/></>} />
+				<Route path="/signin" element={<><Navbar isLoggedIn={false} /><Signin/></>} />
+				<Route path="/user" element={<><Navbar isLoggedIn={true} /><User/></>} />
 			</Routes>
 			<Footer />
 		</div>
