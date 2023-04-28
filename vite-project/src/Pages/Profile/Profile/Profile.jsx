@@ -6,7 +6,6 @@ export default function Profile() {
 	const navigate = useNavigate()
 
 	const UserName = (userId) => {
-		console.log("Je suis le name")
 		navigate("../edit/"+userId)
 	}
 

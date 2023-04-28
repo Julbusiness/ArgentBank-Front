@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { accountService } from "../../../Services/account.service"
 
 export default function Login() {
 	const navigate = useNavigate()
 	const [login, setLogin] = useState({
-		email: 'tony@stark.com',
-		password: 'password123'
+		email: 'tony@stark.com', // mettre une chaine de caractere vide une fois l'app terminé
+		password: 'password123' // idem
 	})
 
 	const onChange = (e) => {
@@ -17,11 +18,12 @@ export default function Login() {
 	}
 
 	const onSubmit = (e) => {
-		console.log("je suis dans le submit")
 		e.preventDefault();
 		axios.post('http://localhost:3001/api/v1/user/login', login) 
 			.then(response => {
 				console.log(response)
+				console.log(response.data.body.token)
+				accountService.saveToken(response.data.body.token)
 				navigate("/user/profile")
 			})
 			.catch(error => console.log(error))
