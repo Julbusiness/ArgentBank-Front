@@ -1,9 +1,13 @@
 html {
 	font-family: Avenir, Helvetica, Arial, sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	/* -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; */
 	text-align: center;
 	color: #2c3e50;
+}
+
+.App{
+	margin: 0;
 }
 
 body {
@@ -13,8 +17,14 @@ body {
 	min-height: 100vh;
 }
 
+.layout {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
 .main {
-	flex: 1; /* c'est ici que le probleme se trouve , mon flex-grow ne fonctionne pas */
+	flex: 1;
 }
 
 .bg-dark {
@@ -87,6 +97,7 @@ body {
 	padding: 2rem 0 1.5rem;
 	position: absolute;
 	bottom: 0;
+	background: #fff;
 }
 
 .footer-text {
@@ -308,4 +319,23 @@ body {
 	.transaction-button {
 		width: 200px;
 	}
+}
+
+/* --------------------------- composant NotFound --------------------------- */
+
+.title-notfound {
+	font-size: 288px;
+	color: #00bc77;;
+	margin: 100px auto 50px;
+}
+
+.txt-notfound {
+	font-size: 36px;
+	color: #00bc77;;
+	margin: 50px auto 100px;
+}
+
+.link-notfound {
+	font-size: 18px;
+	color: #00bc77;;
 }

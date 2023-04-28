@@ -1,9 +1,8 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer";
-import Home from "./Pages/Home/Home";
-import Signin from "./Pages/Signin/Signin";
-import User from "./Pages/User/User";
+import PublicRouter from "./Pages/Public/PublicRouter/PublicRouter";
+import ProfileRouter from "./Pages/Profile/ProfileRouter/ProfileRouter";
+import AuthRouter from "./Pages/Auth/AuthRouter/AuthRouter"
+import AuthProvider from "./Helpers/AuthProvider"
 
 import "./App.css";
 
@@ -11,11 +10,14 @@ function App() {
 	return (
 		<div className="App">
 			<Routes>
-				<Route path="/" element={<><Navbar isLoggedIn={false} /><Home/></>} />
-				<Route path="/signin" element={<><Navbar isLoggedIn={false} /><Signin/></>} />
-				<Route path="/user" element={<><Navbar isLoggedIn={true} /><User/></>} />
+				<Route path="/*" element={<PublicRouter />} />
+				<Route path="/user/login/*" element={<AuthRouter />} />
+				<Route path="/user/profile/*" element={
+				<AuthProvider>
+					<ProfileRouter />
+				</AuthProvider>
+				} />
 			</Routes>
-			<Footer />
 		</div>
 	);
 }

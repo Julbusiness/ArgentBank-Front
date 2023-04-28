@@ -14,7 +14,7 @@ export default function NavbarConnected(props) {
 				<h1 className="sr-only">Argent Bank</h1>
 			</NavLink>
 			<div>
-				<NavLink to="/user" className="main-nav-item">
+				<NavLink to="/user/profile" className="main-nav-item">
 					<i className="fa fa-user-circle"></i>
 					Tony
 				</NavLink>

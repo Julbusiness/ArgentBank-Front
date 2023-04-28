@@ -1,6 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"
 
-export default function User() {
+export default function Profile() {
+
+	const navigate = useNavigate()
+
+	const UserName = (userId) => {
+		console.log("Je suis le name")
+		navigate("../edit/"+userId)
+	}
+
 	return (
 		<main className="main bg-dark">
 			<div className="header">
@@ -9,7 +18,7 @@ export default function User() {
 					<br />
 					Tony Jarvis!
 				</h1>
-				<button className="edit-button">Edit Name</button>
+				<button onClick={() => UserName(7)} className="edit-button">Edit Name</button>
 			</div>
 			<h2 className="sr-only">Accounts</h2>
 			<section className="account">
