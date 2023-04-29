@@ -68,6 +68,20 @@ body {
 	margin-right: 0.5rem;
 }
 
+.main-nav-item-button {
+	text-decoration: none;
+	margin-right: 0.5rem;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.main-nav-item-button i {
+	margin-right: 5px;
+}
+
 .main-nav-item:hover {
 	text-decoration: underline;
 }

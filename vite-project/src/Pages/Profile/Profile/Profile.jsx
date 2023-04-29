@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"
+import { userService } from "../../../Services/user.service";
 
 export default function Profile() {
 
 	const navigate = useNavigate()
+
+	const [user, setUser] = useState([])
+
+	useEffect(() => {
+		console.log('useEffect')
+		userService.getUser()
+			.then(response => {
+				console.log(response.data.body)
+				setUser(response.data.body)
+			})
+			.catch(err => console.log(err))
+	}, [])
 
 	const UserName = (userId) => {
 		navigate("../edit/"+userId)
@@ -15,9 +28,9 @@ export default function Profile() {
 				<h1>
 					Welcome back
 					<br />
-					Tony Jarvis!
+					{user.firstName} {user.lastName} !
 				</h1>
-				<button onClick={() => UserName(7)} className="edit-button">Edit Name</button>
+				<button onClick={() => UserName()} className="edit-button">Edit Name</button>
 			</div>
 			<h2 className="sr-only">Accounts</h2>
 			<section className="account">
