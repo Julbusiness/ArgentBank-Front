@@ -9,7 +9,6 @@ export default function Profile() {
 	const [user, setUser] = useState([])
 
 	useEffect(() => {
-		console.log('useEffect')
 		userService.getUser()
 			.then(response => {
 				console.log(response.data.body)
@@ -18,8 +17,8 @@ export default function Profile() {
 			.catch(err => console.log(err))
 	}, [])
 
-	const UserName = (userId) => {
-		navigate("../edit/"+userId)
+	const UserName = () => {
+		navigate("../edit/")
 	}
 
 	return (

@@ -10,7 +10,7 @@ export default function AdminRouter() {
 		<Routes>
 			<Route element={<ProfileLayout />}>
 				<Route path="/" element={<Profile />} />
-				<Route path="/edit/:id" element={<ProfileEdit />} />
+				<Route path="/edit" element={<ProfileEdit />} />
 				<Route path="/*" element={<NotFound />} />
 			</Route>
 		</Routes>

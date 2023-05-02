@@ -6,7 +6,7 @@ export default function Login() {
 	const navigate = useNavigate()
 	const [login, setLogin] = useState({
 		email: 'steve@rogers.com', // mettre une chaine de caractere vide une fois l'app terminé
-		password: 'password456' // idem
+		password: 'password456'
 	})
 
 	const onChange = (e) => {

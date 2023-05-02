@@ -18,7 +18,7 @@ export default function NavbarConnected(props) {
 				setUser(response.data.body)
 			})
 			.catch(err => console.log(err))
-	}, [])
+	}, [user])
 
 	const logout = () => {
 		accountService.logout()
