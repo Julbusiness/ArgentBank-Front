@@ -263,7 +263,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border: 1px solid black;
+	border: 2px solid #b8c4ce;
 	background-color: #fff;
 	width: 80%;
 	margin: 0 auto;
@@ -293,7 +293,7 @@ body {
 
 .account-content-wrapper {
 	width: 100%;
-	flex: 1; /* ici aussi on a du flex */
+	flex: 1;
 }
 
 .edit-button {
@@ -387,4 +387,71 @@ body {
 	border-color: #00bc77;
 	background-color: #00bc77;
 	color: #fff;
+}
+
+/* ------------------------------- Form update ------------------------------ */
+
+.bg-light {
+	background: #e0e6ed;
+}
+
+.form-update {
+	display: flex;
+	flex-direction: column;
+	margin-top: 5px;
+}
+
+.form-input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.input-wrapper-update input {
+	width: 150px;
+	height: 30px;
+	margin: 5px;
+	padding-left: 10px;
+	border: 2px solid #b8c4ce;
+	color: #c3cfd9;
+}
+
+.form-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.edit-button-save,
+.edit-button-cancel {
+	width: 100px;
+	height: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 5px;
+	border: 2px solid #b8c4ce;
+	background: white;
+	font-size: 12px;
+	color: #8d83f8;
+}
+
+.title {
+	color: black;
+	font-size: 25px;
+	font-weight: normal;
+}
+
+.transaction-button-edit {
+	display: block;
+	padding: 8px;
+	font-size: 15px;
+	font-weight: bold;
+	margin-top: 1rem;
+	border-color: #6458f5;
+	background-color: #6458f5;
+	color: #fff;
+	border-radius: 5px;
+	width: 180px;
 }
