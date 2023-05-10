@@ -4,7 +4,7 @@ import { accountService } from '../Services/account.service'
 
 export default function AuthProvider({children}) {
 
-  if(!accountService.isLogged) {
+  if(!accountService.isLogged || !accountService.isSessionLogged) {
     return <Navigate to="/user/login" />
   }
 

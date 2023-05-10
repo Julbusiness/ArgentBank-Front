@@ -14,8 +14,6 @@ Axios.interceptors.request.use(request => {
   return request
 })
 
-// suppression de l'erreur 401 lorsque le token se périme (attention avec redux)
-
 // Axios.interceptors.response.use(response => {
 //   return response
 // }, error => {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"
-import { userService } from "../../../Services/user.service";
+import { userService } from "../../Services/user.service";
 
 export default function Profile() {
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { userService } from "../../../Services/user.service.js";
+import { userService } from "../../Services/user.service.js";
 
 export default function ProfileEdit() {
 	const navigate = useNavigate();
@@ -10,7 +10,7 @@ export default function ProfileEdit() {
 		userService
 			.getUser()
 			.then((response) => {
-				console.log(response.data.body);
+				// console.log(response.data.body);
 				setUser(response.data.body);
 			})
 			.catch((err) => console.log(err));

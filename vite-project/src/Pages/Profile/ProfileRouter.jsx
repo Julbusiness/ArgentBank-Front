@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import ProfileLayout from "../Layout/ProfilLayout";
-import Profile from "../Profile/Profile";
-import ProfileEdit from "../Profile/ProfileEdit";
-import NotFound from "../../../utils/NotFound";
+import ProfileLayout from "./ProfilLayout";
+import Profile from "./Profile";
+import ProfileEdit from "./ProfileEdit";
+import NotFound from "../../utils/NotFound";
 
 export default function AdminRouter() {
 	return (

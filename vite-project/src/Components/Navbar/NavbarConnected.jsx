@@ -23,7 +23,6 @@ export default function NavbarConnected(props) {
 	const logout = () => {
 		accountService.logout()
 		navigate("/")
-		location.reload();
 	}
 
 	return (

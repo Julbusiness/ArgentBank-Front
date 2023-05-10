@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import AuthLayout from "../Layout/AuthLayout"
-import Login from "../../Auth/Login/Login";
-import NotFound from "../../../utils/NotFound";
+import AuthLayout from "./AuthLayout";
+import Login from "./Login";
+import NotFound from "../../utils/NotFound";
 
 export default function AuthRouter() {
 	return (
